@@ -1,13 +1,19 @@
-import {StrictMode} from 'react';
-import {createRoot} from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 import "./index.css";
-import EventList from "./components/event-list.component";
-import { events } from "./events";
+import App from "./App";
+import Footer from './components/footer.component';
+import Navbar from './components/navbar.component';
 
-const root = createRoot(document.getElementById('root'));
+const body = createRoot(document.querySelector("body"));
 
-root.render(
-    <StrictMode>
-        <EventList events={events} />
-    </StrictMode>,
-);
+body.render([
+    <header>
+        <Navbar />
+    </header>,
+    <main>
+        <App />
+    </main>,
+    <footer>
+        <Footer />
+    </footer>
+]);
