@@ -6,14 +6,16 @@ import Navbar from './components/navbar.component';
 
 const body = createRoot(document.querySelector("body"));
 
-body.render([
-    <header>
-        <Navbar />
-    </header>,
-    <main>
-        <App />
-    </main>,
-    <footer>
-        <Footer />
-    </footer>
-]);
+body.render(
+    <div className='dark:bg-slate-800'>
+        <header>
+            <Navbar />
+        </header>
+        <main>
+            <App />
+        </main>
+        <footer>
+            <Footer />
+        </footer>
+    </div>
+);

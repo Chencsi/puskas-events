@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar = () => {
     return ([
-<nav class="bg-white border-gray-200 dark:bg-gray-900">
+<nav class="bg-white border-gray-200 dark:bg-slate-800">
             <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
                 <a href="" class="flex items-center">
                     <img src="favicon.svg" class="h-8 mr-3" alt="Flowbite Logo" />

@@ -1,6 +1,5 @@
 import React from "react";
 import Event from "./event.component";
-import SearchBox from "./searchbox.component";
 
 const EventList = ({ events }) => {
     const eventComponents = events.map((event) => {
@@ -19,9 +18,8 @@ const EventList = ({ events }) => {
         );
     });
     return(
-        <div className="container rounded-lg bg-slate-50 py-3 px-5 mx-auto shadow dark:bg-gray-800">
+        <div className="container rounded-lg bg-slate-100 py-3 px-5 mx-auto shadow dark:bg-slate-700">
             <ul role="list">
-            <SearchBox />
             {eventComponents}
             </ul>
         </div>
