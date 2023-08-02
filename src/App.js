@@ -12,16 +12,21 @@ class App extends React.Component {
         }
     }
 
-    onSearchChange = (event) => {
-        console.log(event.target.value);
+    onSearchChange = (evt) => {
+        this.setState({ searchfield: evt.target.value })
     }
 
     render(){
+        const filteredEvents = this.state.events.filter((event) => {
+            return event.eventName
+                .toLowerCase()
+                .includes(this.state.searchfield.toLocaleLowerCase());
+        });
         return(
             <div>
-                <h1 class="my-7 text-3xl font-extrabold text-slate-700 dark:text-white md:text-5xl lg:text-6xl text-center">Legutóbbi és közelgő események</h1>
+                <h1 class="my-7 text-3xl font-extrabold text-slate-7 00 dark:text-white md:text-5xl lg:text-6xl text-center">Legutóbbi és közelgő események</h1>
                 <SearchBox searchChange={this.onSearchChange}/>
-                <EventList events={this.state.events} />
+                <EventList events={filteredEvents} />
             </div>
         );
     }
